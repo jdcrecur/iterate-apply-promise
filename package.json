@@ -1,0 +1,30 @@
+{
+  "name": "iterate-apply-promise",
+  "version": "1.0.0",
+  "description": "Iterate over an array, for each item apply a function which itself will return a promise. The provided funciton is itself wrapped in an async/await with try catch.",
+  "main": "index.js",
+  "scripts": {
+    "build:es5": "./node_modules/.bin/babel index.js -d es5",
+    "test": "NODE_ENV=TEST jest",
+    "prepublish": "npm run test && npm run build:es5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdcrecur/iterate-apply-promise.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jdcrecur/iterate-apply-promise/issues"
+  },
+  "homepage": "https://github.com/jdcrecur/iterate-apply-promise#readme",
+  "dependencies": {
+    "async": "^2.6.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-env": "^1.6.1",
+    "jest": "^22.3.0"
+  }
+}
